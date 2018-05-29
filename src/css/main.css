@@ -1,0 +1,10 @@
+.mainleft,.mainright{
+    display: inline-block;
+}
+.mainleft{
+    width: 30%;
+    height: 100%;
+}
+.mainright{
+    width: 60%;
+}
