@@ -1,0 +1,175 @@
+.k_content_right {
+    float: right;
+  width: 85%;
+
+}
+k_content_right_top{
+    width: 100%;
+}
+.k_content_right_top .k_count {
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 32%;
+    height: 400px;
+}
+/*安全事件工作情况概括 */
+#mainpie{
+    display:inline-block;
+    width:100%;
+    height: 300px;
+    margin-top: 20px;
+}
+.k_generalize {
+    background-color: #fff;
+}
+.k_generalize p {
+    border-bottom: 2px solid #33c6df;
+    width: 181px;
+    margin-left: 30px;
+    line-height: 30px;
+    font-size: 18px;
+    margin-top: 20px;
+}
+/*处置工作情况 */
+#mainbar{
+    display:inline-block;
+    width:100%;
+    height: 270px;
+}
+.k_condition {
+    background-color: #fff;
+}
+.k_condition p {
+    border-bottom: 2px solid #f78a09;
+    width: 110px;
+    margin-left: 30px;
+    line-height: 30px;
+    font-size: 18px;
+    margin-top: 20px;
+}
+.k_datapercentage {
+    margin-left: 30px;
+    margin-top: 10px;
+    color: #00dbe7;
+    font-size: 22px;
+    font-weight: 600;
+}
+.k_percentage {
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+/*安全事件类型统计 */
+#mainscatter{
+    display:inline-block;
+    width:100%;
+    height: 300px;
+    margin-top: 20px;
+}
+.k_statistics {
+   
+    background-color: #fff;
+}
+
+.k_statistics p {
+    border-bottom: 2px solid #5b9cec;
+    width: 144px;
+    margin-left: 30px;
+    line-height: 30px;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.k_statistics a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.k_hobbyhorse {
+    width: 170px;
+    height: 170px;
+    background-color: #97cdf9;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 170px;
+    color: #fff;
+    font-size: 24px;
+    margin-left: 190px;
+    margin-top: 50px;
+}
+
+.k_loophole {
+    width: 45px;
+    height: 45px;
+    background-color: #b2b9e1;
+    border-radius: 50%;
+    position: relative;
+    top: -86px;
+    left: -185px;
+}
+
+.k_loophole_text {
+    font-size: 14px;
+    color: #b2b9e1;
+    position: relative;
+    top: -137px;
+    left: -114px;
+}
+
+.k_postern {
+    width: 30px;
+    height: 30px;
+    background-color: #d8a9e0;
+    border-radius: 50%;
+    position: relative;
+    top: -215px;
+    left: 145px;
+}
+
+.k_postern_text {
+    color: #d8a9e0;
+    font-size: 14px;
+    position: relative;
+    top: -227px;
+    left: 220px;
+}
+
+.k_horse {
+    width: 45px;
+    height: 45px;
+    background-color: #b7deb9;
+    border-radius: 50%;
+    position: relative;
+    top: -157px;
+    left: 135px;
+}
+
+.k_horse_text {
+    color: #b7deb9;
+    font-size: 14px;
+    position: relative;
+    top: -175px;
+    left: 220px;
+}
+/* 清楚浮动 */
+.clear{
+    clear: both;
+}
+/* 走马灯 */
+
+.k_trotting {
+    height: 70px;
+    background-color: #fff;
+    margin-left: 10px;
+}
+.k_trotting span{
+    line-height: 70px;
+
+}
+.k_trotting_span{
+    margin-left: 60px;
+}
+.k_trotting span:nth-child(3){
+   font-size: 14px;
+}
