@@ -1,0 +1,47 @@
+.ant-tabs-bar{
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+    background-color: #fff;
+    border: 0;
+}
+.ant-tabs:not(.ant-tabs-vertical) > .ant-tabs-content > .ant-tabs-tabpane-active{
+    margin-left: 30px;
+    width: calc(100% - 60px);
+}
+.ant-tabs-nav-container{
+    width: calc(100% - 60px);
+    margin-left: 30px;
+}
+.mytab .ant-tabs{
+    margin-top: 20px;
+    background-color: #fff;
+    height: 375px;
+    overflow-y: scroll;
+}
+.ant-table-tbody > tr > td{
+    padding: 16px 16px;
+}
+.ant-table-thead > tr > th{
+    padding: 8px 16px;
+}
+.mytab{
+    position: relative;
+}
+.myselect{
+    position: absolute;
+    right: 120px;
+    z-index: 9;
+    top: 11px;
+}
+.ant-tabs-nav .ant-tabs-tab-active{
+    color:#000;
+}
+.ant-tabs-ink-bar{
+    background-color: #33c6df;
+}
+.ant-table-tbody a{
+    padding: 4px 30px;
+    border: 1px solid #409EFF;
+    color: #409EFF;
+    border-radius: 15px;
+}
