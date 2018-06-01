@@ -88,7 +88,7 @@ class Doingtable extends Component{
             })
             }.bind(this),
             error: function (json) {
-                alert("加载失败");
+                console.log("正在下发的数据未获取");
             }
         });
     }

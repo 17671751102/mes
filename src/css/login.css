@@ -5,7 +5,8 @@
     color: #fff;
     text-align: center;
     padding-top: 100px;
-    height: calc(100% - 100px)
+    height: calc(100% - 100px);
+    min-height: 700px;
 }
 html,body{
     height: 100%;
@@ -14,10 +15,11 @@ html,body{
 .ingobg h1{
     font-weight: 500;
     text-align: center;
+    color: #fff;
 }
 .ingobg>div{
     width: 600px;
-    height: 580px;
+    height: 450px;
     margin: 0 auto;
 
 }
@@ -25,23 +27,6 @@ html,body{
     background: url('../img/box.png') no-repeat;
     height: 370px;
     padding-top: 110px;
-}
-.loggroup{
-    width: 411px;
-    height: 35px;
-    border-bottom: 1px solid #8191b6;
-    margin: 38px auto;
-    text-align: left;
-}
-.loggroup input{
-    margin-left: 20px;
-    border: 0;
-    background-color: inherit;
-    font-size: 18px;
-    color: #fff;
-}
-.loggroup input:focus{
-    outline:none;
 }
 .logform a{
     display: block;
@@ -57,3 +42,43 @@ html,body{
     box-shadow: 0px 0px 10px #8191b6;
     background-color: #020b7d;
 }
+.ant-form-item{
+    margin-bottom: 26px;
+    padding-right: 130px;
+    height: 60px;
+}
+.ant-form-item-control-wrapper{
+    display: inline-block;
+    vertical-align: top;
+}
+.ant-input{
+    border:0px;
+    background-color: initial;
+    font-size: 18px;
+    color: #fff;
+    width: 260px;
+}
+.ant-input:focus{
+    outline: none;
+}
+.ant-form-item-label label{
+    color: #fff;
+}
+.ant-form-item-label{
+    width: 60px;
+    text-align: left;
+}
+.ant-form-item-required:before{
+    content: ''
+}
+.has-error .ant-input:focus{
+    border: 0px;
+    box-shadow: 0 0 0 0px rgba(24, 144, 255, 0.2);
+}
+.ant-input:focus{
+    border: 0px;
+    /* -webkit-box-shadow: 0; */
+    box-shadow: 0 0 0 0px rgba(24, 144, 255, 0.2);
+}
+
+

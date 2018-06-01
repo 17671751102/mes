@@ -94,7 +94,7 @@ class Chartpie extends Component {
                 });
             }.bind(this),
             error: function () {
-                alert(1)
+                console.log("饼状图数据未获取")
             }
 
         })
