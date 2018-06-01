@@ -8,9 +8,6 @@ k_content_right_top{
 }
 .k_content_right_top .k_count {
     float: left;
-    margin-left: 10px;
-    margin-top: 10px;
-    width: 32%;
     height: 400px;
 }
 /*安全事件工作情况概括 */
@@ -22,6 +19,7 @@ k_content_right_top{
 }
 .k_generalize {
     background-color: #fff;
+    width: calc(33%);
 }
 .k_generalize p {
     border-bottom: 2px solid #33c6df;
@@ -39,6 +37,8 @@ k_content_right_top{
 }
 .k_condition {
     background-color: #fff;
+    margin-left: 10px;
+    width: calc(33% - 5px);
 }
 .k_condition p {
     border-bottom: 2px solid #f78a09;
@@ -68,8 +68,9 @@ k_content_right_top{
     margin-top: 20px;
 }
 .k_statistics {
-   
+    margin-left: 10px;
     background-color: #fff;
+    width: calc(33% - 5px);
 }
 
 .k_statistics p {
@@ -157,18 +158,29 @@ k_content_right_top{
     clear: both;
 }
 /* 走马灯 */
-
-.k_trotting {
-    height: 70px;
-    background-color: #fff;
-    margin-left: 10px;
+.ant-carousel{
+    display: inline-block;
+    width: calc(100% - 190px);
+    margin-left: 20px;
+    vertical-align: middle;
 }
-.k_trotting span{
-    line-height: 70px;
-
+.k_trotting {
+    height: 55px;
+    width: 100%;
+    background-color: #fff;
+    margin-top: 20px;
+    box-shadow: 0px 0px 10px #ddd;
+    line-height: 55px;
+    overflow: hidden;
+    font-size: 16px;
+}
+.k_trotting img{
+    margin-left: 40px;
 }
 .k_trotting_span{
-    margin-left: 60px;
+    margin-left: 20px;
+    display: inline-block;
+    height: 55px;
 }
 .k_trotting span:nth-child(3){
    font-size: 14px;
