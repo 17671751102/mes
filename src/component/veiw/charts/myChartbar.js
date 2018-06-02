@@ -5,24 +5,30 @@ class Chartbar extends Component{
     constructor(){
         super()
         this.state={
-            result:null
+            result:null,
+            title:null
         }
     }
-    componentDidMount(){
+    loadlists(){
         $.ajax({
             type: "post",
             dataType: "json",
             url: this.props.url,
             success: function (json) {
+                //图表数据
                 var jsons = []
+                //图表种类
+                var labe =[]
                 for (var i = 0; i < json.message.length; i++) {
                     jsons.push({
-                        value: parseInt(json.message[i].count),
-                        name: json.message[i].DealStatus
+                        value: parseInt(json.message[i].count,10),
+                        // name: json.message[i].DealStatus
                     })
+                    labe.push(json.message[i].DealStatus)
                 }
                 this.setState({
-                    result: jsons
+                    result: jsons,
+                    title:labe
                 })
                 var myChartbar = echarts.init(document.getElementById('mainbar'));
                     myChartbar.setOption({  
@@ -51,7 +57,8 @@ class Chartbar extends Component{
                             }
                         },
                         yAxis: {
-                            data: ["处置总数（件）", "处置中（件）", "已归档（件）"],
+                            data: this.state.title,
+                            axisTick : {show: false},
                             type: 'category',
                             axisLabel: {
                                 textStyle: {
@@ -95,7 +102,15 @@ class Chartbar extends Component{
                 console.log('柱状图数据未获取')
             }
         })
-        
+    }
+    componentDidMount(){
+        this.loadlists()
+    }
+    componentWillUnmount(){
+        //组件卸载前结束异步请求
+        this.setState = (state,callback)=>{
+            return;
+        };
     }
     render(){
         return(
