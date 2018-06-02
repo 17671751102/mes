@@ -90,8 +90,10 @@ class Chartbar extends Component{
                 $(window).resize(function () {
                     myChartbar.resize();
                 });
-            }.bind(this)
-
+            }.bind(this),
+            error:function(json){
+                console.log('柱状图数据未获取')
+            }
         })
         
     }

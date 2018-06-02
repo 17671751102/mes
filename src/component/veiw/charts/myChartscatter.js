@@ -141,7 +141,7 @@ class Chartscatter extends Component{
                 });
             }.bind(this),
             error:function(){
-                alert(1)
+                console.log("气泡图数据未获取")
             }
         })
     }

@@ -29,7 +29,7 @@ class Scroll extends Component{
                 })
             }.bind(this),
             error:function(){
-                alert("没数据")
+                console.log("滚动数据未获取")
             }
         })
     }

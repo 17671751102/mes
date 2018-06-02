@@ -86,7 +86,7 @@ class Donetable extends Component{
                 })
             }.bind(this),
             error: function (json) {
-                alert("加载失败");
+                console.log("已完成数据未获取");
             }
         });
     }
