@@ -3,14 +3,14 @@ import echarts from 'echarts';
 import $ from 'jquery'
 class Chartscatter extends Component{
     constructor(){
-        super(),
+        super()
         this.state={
             result:null
         }
     }
-    componentDidMount(){
-         //散点图
-         var plantCap = [{
+    loadlists(){
+        //散点图
+        var plantCap = [{
             name: '木马',
             position: 'bottom',
             color: '#ff8686',
@@ -139,11 +139,20 @@ class Chartscatter extends Component{
                 $(window).resize(function () {
                     myChartscatter.resize();
                 });
-            }.bind(this),
+            },
             error:function(){
                 console.log("气泡图数据未获取")
             }
         })
+    }
+    componentDidMount(){
+         this.loadlists()
+    }
+    componentWillUnmount(){
+        //组件卸载前结束异步请求
+        this.setState = (state,callback)=>{
+            return;
+        };
     }
     render(){
         return(

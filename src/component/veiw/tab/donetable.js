@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {Table} from 'antd';
 import {Link} from 'react-router-dom';
-import $ from 'jquery'
 class Donetable extends Component{
     constructor(){
         super();
@@ -31,9 +30,8 @@ class Donetable extends Component{
           dataIndex: 'cpl',
           key: 'cpl',
           align:"center",
-          sorter: (a, b) => a.cpl - b.cpl,
+          sorter: (a, b) => parseInt(a.cpl,10)-parseInt(b.cpl,10),
         }];
-        {/*unshift() 往数组头部添加元素*/}
       theader.unshift({
         title: '序号',
         dataIndex: 'ID',
@@ -45,7 +43,6 @@ class Donetable extends Component{
           )
         }
       })
-      {/*push() 往数组尾部添加元素*/}
       theader.push({
         title: '操作',
         dataIndex: 'action',
@@ -60,39 +57,25 @@ class Donetable extends Component{
       })
       this.columns = theader
       this.state={
-            dataSource:null,
+            current:1,
             loading:true
       }
     }
-    componentDidMount(){
-        $.ajax({
-            type: "post",
-            dataType: "json",
-            url: this.props.url,
-            success: function (json) {
-                var jsons =[]
-                for(var i=0;i<json.message.length;i++){
-                    jsons.push({
-                        key:i+1,
-                        city_name:json.message[i].city_name,
-                        sum:json.message[i].sum,
-                        row:json.message[i].row,
-                        cpl:json.message[i].cpl,
-                    })
-                }
-                this.setState({
-                    dataSource:jsons,
-                    loading:false
-                })
-            }.bind(this),
-            error: function (json) {
-                console.log("已完成数据未获取");
-            }
-        });
-    }
+    
     render(){
         const columns = this.columns;
-        return(<Table dataSource={this.state.dataSource} columns={columns} loading={this.state.loading} />)
+        return(<Table dataSource={this.props.url} columns={columns} loading={this.props.loading} 
+            pagination={{total:5,
+                current:this.state.current,
+                size:"small",
+                position:"bottom",
+                pageSize:4,
+                onChange: (page, pageSize) => {
+                    console.log('current page: ', page)
+                    this.setState({
+                        current: page
+                    })
+                }}}/>)
     }
 } 
 export default Donetable

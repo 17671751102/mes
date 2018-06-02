@@ -37,12 +37,13 @@ body,html{
     color: #999;
     background-color: #ebf0ff;
     border-radius: 30px;
-    width: 200px;
-    height: 30px;
+    width: 80%;
+    height: 35px;
     text-align: center;
-    line-height: 30px;
+    line-height: 35px;
     margin: 0 auto;
     margin-top: 30px;
+    font-size: 16px;
 }
 .sysleft a:hover{
     background-color: #1633cd;

@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-// import { BrowserRouter } from "react-router-dom";
+import React from 'react';
 import '../css/login.css';
 import log from '../img/log.png'
 import {Form, Input, Button} from 'antd';
@@ -27,21 +26,21 @@ class NormalLoginForm extends React.Component {
                         {getFieldDecorator('用户名', {
                             rules: [{ required: true, message: '请输入用户名' }],
                         })(
-                            <Input autocomplete="off"/>
+                            <Input autoComplete="off"/>
                         )}
                     </FormItem>
                     <FormItem label="密码">
                         {getFieldDecorator('密码', {
                             rules: [{ required: true, message: '请输入密码' }],
                         })(
-                            <Input type="password" autocomplete="off"/>
+                            <Input type="password" autoComplete="off"/>
                         )}
                     </FormItem>
                     <FormItem label="验证码">
                         {getFieldDecorator('验证码', {
                             rules: [{ required: true, message: '请输入验证码' }],
                         })(
-                            <Input autocomplete="off"/>
+                            <Input autoComplete="off"/>
                         )}
                     </FormItem>
                     <Button type="primary" htmlType="submit" className="login-form-button">登录</Button>

@@ -7,24 +7,30 @@ class Chartpie extends Component {
     constructor() {
         super()
         this.state = {
-            result: null
+            result: null,
+            title:null
         }
     }
-    componentDidMount() {
+    loadlists(){
         $.ajax({
             type: "post",
             dataType: "json",
             url: this.props.url,
             success: function (json) {
+                //图表数据
                 var jsons = []
+                //图表种类
+                var labe =[]
                 for (var i = 0; i < json.message.length; i++) {
                     jsons.push({
-                        value: parseInt(json.message[i].count),
+                        value: parseInt(json.message[i].count,10),
                         name: json.message[i].DealStatus
                     })
+                    labe.push(json.message[i].DealStatus)
                 }
                 this.setState({
-                    result: jsons
+                    result: jsons,
+                    title:labe
                 })
                 var myChartpie = echarts.init(document.getElementById("mainpie"));
                 myChartpie.setOption({
@@ -34,7 +40,8 @@ class Chartpie extends Component {
                         textStyle: {
                             fontSize: 12
                         },
-                        data: ["未提交", "待处理", "待核查", "已完成", "已关闭"]
+                        data: this.state.labe,
+                        selected: {'已完成':false}
                     },
                     series: [{
                         name: '访问来源',
@@ -85,10 +92,10 @@ class Chartpie extends Component {
                         "#00dbe7",
                         "#ff7491",
                         "#2bc4f5",
-                        "#be8bd6"
+                        "#be8bd6",
+                        "#ff8686"
                     ]
                 });
-                var myChartbar = echarts.init(document.getElementById('mainbar'));
                 $(window).resize(function () {
                     myChartpie.resize();
                 });
@@ -98,6 +105,15 @@ class Chartpie extends Component {
             }
 
         })
+    }
+    componentDidMount() {
+        this.loadlists()
+    }
+    componentWillUnmount(){
+        //组件卸载前结束异步请求
+        this.setState = (state,callback)=>{
+            return;
+        };
     }
     render() {
         return (<span id="mainpie"> </span>)

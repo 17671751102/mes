@@ -42,43 +42,63 @@ html,body{
     box-shadow: 0px 0px 10px #8191b6;
     background-color: #020b7d;
 }
-.ant-form-item{
-    margin-bottom: 26px;
-    padding-right: 130px;
-    height: 60px;
+.logform .ant-form-item{
+    height: 40px;
+    text-align: left;
+    width: 410px;
+    margin: 32px auto;
+    border-bottom: 1px solid #8191b6;
 }
-.ant-form-item-control-wrapper{
+.logform .ant-form-item-control-wrapper{
     display: inline-block;
     vertical-align: top;
 }
-.ant-input{
+.logform .ant-form-item-control{
+    line-height: 42px;
+}
+.logform .ant-input{
     border:0px;
     background-color: initial;
     font-size: 18px;
     color: #fff;
     width: 260px;
 }
-.ant-input:focus{
+.logform .ant-input:focus{
     outline: none;
 }
-.ant-form-item-label label{
+.logform .ant-form-item-label label{
     color: #fff;
+    font-size: 16px;
 }
-.ant-form-item-label{
+.logform .ant-form-item-label{
     width: 60px;
     text-align: left;
 }
-.ant-form-item-required:before{
+.logform .ant-form-item-required:before{
     content: ''
 }
-.has-error .ant-input:focus{
+.logform .has-error .ant-input:focus{
     border: 0px;
     box-shadow: 0 0 0 0px rgba(24, 144, 255, 0.2);
 }
-.ant-input:focus{
+.logform .ant-input:focus{
     border: 0px;
     /* -webkit-box-shadow: 0; */
     box-shadow: 0 0 0 0px rgba(24, 144, 255, 0.2);
+}
+.logform .ant-btn-primary{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    width: 145px;
+    height: 35px;
+    border: 1px solid #8191b6;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 35px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 10px #8191b6;
+    background-color: #020b7d;
 }
 
 

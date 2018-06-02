@@ -5,12 +5,12 @@ import {Link} from 'react-router-dom'
 import src from '../../../img/trotting.png'
 class Scroll extends Component{
     constructor(){
-        super(),
+        super()
         this.state={
             result:null
         }
     }
-    componentDidMount(){
+    loadlists(){
         $.ajax({
             type: "post",
             dataType: "json",
@@ -32,6 +32,15 @@ class Scroll extends Component{
                 console.log("滚动数据未获取")
             }
         })
+    }
+    componentDidMount(){
+        this.loadlists()
+    }
+    componentWillUnmount(){
+        //组件卸载前结束异步请求
+        this.setState = (state,callback)=>{
+            return;
+        };
     }
     render(){
         return(

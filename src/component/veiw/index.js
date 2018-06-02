@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import '../../css/veiw/index.css'
-import echarts from 'echarts';
-import $ from 'jquery'
 import Chartpie from './charts/myChartpie'
 import Chartbar from './charts/myChartbar'
 import Chartscatter from './charts/myChartscatter'
