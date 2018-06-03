@@ -23,7 +23,7 @@ body,html{
     width: 100%;
     height: calc(100% - 81px);
     background-color: #f0f3fb;
-    overflow: hidden;
+    /* overflow: hidden; */
     min-height: 890px;
 }
 .sysleft{
