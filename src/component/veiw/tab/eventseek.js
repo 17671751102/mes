@@ -7,13 +7,17 @@ class HorizontalLoginForm extends Component {
     constructor(){
         super()
         this.state={
-            reslut:null
+            reslut:null,
+            conditions:null
         }
     }
     handleSubmit = (e) => {
       e.preventDefault();
       this.props.form.validateFields((err, values) => {
         if (!err) {
+            this.setState({
+                conditions:values
+            })
           console.log('Received values of form: ', values);
         }
       });
@@ -22,6 +26,7 @@ class HorizontalLoginForm extends Component {
         $.ajax({
             type: "post",
             dataType: "json",
+            data:{conditions:this.state.conditions},
             url: 'http://192.168.40.180/index.php/Index/index/city_data',
             success:function(json){
                 var op=[]
@@ -78,9 +83,11 @@ class HorizontalLoginForm extends Component {
                             {getFieldDecorator('事件类型')(
                                 <Select placeholder="全部">
                                     <Option value="1">全部</Option>
-                                    <Option value="2">低危漏洞</Option>
-                                    <Option value="3">中危漏洞</Option>
-                                    <Option value="4">高危漏洞</Option>
+                                    <Option value="2">病毒</Option>
+                                    <Option value="3">服务器遭入侵</Option>
+                                    <Option value="4">网站篡改</Option>
+                                    <Option value="5">DDOC</Option>
+                                    <Option value="6">其他</Option>
                                 </Select>
                             )}
                         </FormItem>

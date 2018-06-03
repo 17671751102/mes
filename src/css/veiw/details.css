@@ -1,0 +1,40 @@
+/* 详情页面头部 */
+.rightdetail .righttab{
+    padding: 0;
+    line-height: 70px;
+    padding-left: 20px;
+    font-size: 16px;
+    color: #000;
+}
+.rightdetail .righttab span{
+    margin-left: 10px;
+}
+.rightdetail{
+    height: 100%;
+}
+/* 详情页面事件描述 */
+.circumstantiality{
+    width: calc(100% - 70px);
+}
+.messagetitle{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #f0f3fb;
+    padding-left: 25px;
+    font-size: 15px;
+    color: #000;
+}
+.messagecontent{
+    font-size: 14px;
+    padding: 20px
+}
+.messagecontent label {
+    color: #000;
+    display: inline-block;
+    margin: 5px 12px;
+    width: 220px;
+}
+.messagecontent span {
+    color: #666;
+}

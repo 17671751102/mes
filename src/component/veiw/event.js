@@ -17,6 +17,7 @@ class Event extends Component{
                         </TabPane>
                         <TabPane tab="安全漏洞" key="2">
                             <Leakseek/>
+                            <List ur="http://192.168.40.180/index.php/Index/index/leak_list"/>
                         </TabPane>
                     </Tabs>
                 </div>
