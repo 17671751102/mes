@@ -131,12 +131,13 @@
 .righttab .list_pro>div{
     display: inline-block;
 }
-.list_pro .ant-checkbox-group{
+.list_pro .ant-checkbox-wrapper{
     padding-top: 20px;
 }
 .list_pro .ant-row>div{
     display: inline;
     width:auto;
+    height: 28px;
 }
 .antd-pro-description-list-descriptionList .antd-pro-description-list-title{
     margin-bottom: 5px;

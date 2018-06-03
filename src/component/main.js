@@ -4,6 +4,7 @@ import Index from './veiw/index'
 import Event from './veiw/event'
 import Harve from './veiw/harve'
 import Data from './veiw/data'
+import Details from './veiw/details'
 import {Icon} from 'antd'
 import '../css/main.css'
 class Main extends Component{
@@ -38,7 +39,7 @@ class Main extends Component{
                 <div className="syscontent">
                     <div className="sysleft">
                         <NavLink to="/main/" exact><Icon type="home" />首页</NavLink>
-                        <NavLink to="/main/event|leak"><Icon type="exception" />事件/漏洞</NavLink>
+                        <NavLink to="/main/event|leak" id="event"><Icon type="exception"/>事件/漏洞</NavLink>
                         <NavLink to="/main/harve"><Icon type="calendar" />重保任务</NavLink>
                         <NavLink to="/main/Data"><Icon type="cloud-o" />数据管理</NavLink>
                     </div>
@@ -47,6 +48,7 @@ class Main extends Component{
                         <Route path="/main/event|leak" component={Event}/>
                         <Route path="/main/harve" component={Harve}/>
                         <Route path="/main/Data" component={Data}/>
+                        <Route path="/main/Details" component={Details}/>
                     </div>
                 </div>
                 
