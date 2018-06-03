@@ -96,7 +96,7 @@ class HorizontalLoginForm extends Component {
                                 </Select>
                             )}
                         </FormItem>
-                        <FormItem label="事件来源">
+                        <FormItem label="漏洞来源">
                             {getFieldDecorator('事件来源')(
                                 <Select placeholder="全部">
                                     <Option value="0">全部</Option>

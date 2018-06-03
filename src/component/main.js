@@ -21,6 +21,9 @@ class Main extends Component{
     //         this.props.history.push('/main')
     //     }
     // }
+    handle(){  
+        return (<Details url="http://192.168.40.180/index.php/Index/index/event_detail"/>)
+      }  
     render(){
         return(
             <div>
@@ -48,7 +51,7 @@ class Main extends Component{
                         <Route path="/main/event|leak" component={Event}/>
                         <Route path="/main/harve" component={Harve}/>
                         <Route path="/main/Data" component={Data}/>
-                        <Route path="/main/Details" component={Details}/>
+                        <Route path="/main/Details" render={this.handle}/>
                     </div>
                 </div>
                 
