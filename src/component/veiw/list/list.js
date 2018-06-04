@@ -1,10 +1,11 @@
-import { Pagination } from 'antd';
+import { Pagination} from 'antd';
 import React,{ Component } from 'react';
 import {Link} from 'react-router-dom'
 import $ from 'jquery'
 import 'ant-design-pro/dist/ant-design-pro.css';
 import DescriptionList from 'ant-design-pro/lib/DescriptionList';
 import Ellipsis from 'ant-design-pro/lib/Ellipsis';
+import Truemodal from '../modal/truemodal'
 const { Description } = DescriptionList;
 class List extends Component{
     constructor(){
@@ -39,7 +40,7 @@ class List extends Component{
                                         <Description term="处置状态"><Ellipsis length={8}>{json.message[i].DealStatus}</Ellipsis></Description>
                                     </DescriptionList>
                                 </Link>
-                                <button>下发</button>
+                                <Truemodal url="http://192.168.40.180/index.php/Index/index/handle"/>
                             </div>
                         </div>
                     )

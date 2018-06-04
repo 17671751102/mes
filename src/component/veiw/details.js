@@ -9,7 +9,7 @@ class Ddtails extends Component{
         super()
         this.state={
             data:null,
-            div:null,
+            divs:null,
         }
     }
     getdatas(){
@@ -19,9 +19,11 @@ class Ddtails extends Component{
             url: this.props.url,
             success:function(json){
                 var jsons = json.message
-                var div =[]
-                div.push(
-                    <div className="circumstantiality">
+                var op =[]
+                var time =[]
+                var Description=[]
+                op.push(
+                    <div className="circumstantiality" key={1}>
                         <div className="messagetitle">
                             事件编号：{jsons.Number}
                         </div>
@@ -58,10 +60,18 @@ class Ddtails extends Component{
                         </div>
                     </div>
                 )
-                console.log(jsons)
+                for(var i=0;i<jsons.Log.length;i++){
+                    Description.push(
+                        <Timeline.Item key={i}>{jsons.Log[i].Description}</Timeline.Item>
+                    )
+                    time.push(
+                        <Timeline.Item key={i}>{jsons.Log[i].CreateTime}</Timeline.Item>
+                    )
+                }
                 this.setState({
-                    data:jsons,
-                    div:div
+                    data:time,
+                    datas:Description,
+                    divs:op
                 })
             }.bind(this),
             error:function(){
@@ -72,13 +82,15 @@ class Ddtails extends Component{
     componentDidMount(){
         this.getdatas()
         $('#event').addClass('active')
-        console.log(this.state.data)
     }
     componentWillUnmount(){
         $('#event').removeClass('active')
         this.setState = (state,callback)=>{
             return;
         };
+    }
+    back(){
+        window.location.href="/main/event|leak"
     }
     render(){
         return(
@@ -88,22 +100,23 @@ class Ddtails extends Component{
                     <span>事件详情</span>
                 </div>
                 <div className="syslist">
-                   {/* {div} */}
+                   {this.state.divs}
                     <div className="circumstantiality">
                         <div className="messagetitle">
                             历史记录
                         </div>
                         <div className="messagecontent">
-                        <Timeline pending="Recording..." >
-                            <Timeline.Item>Create a services site 2015-09-01</Timeline.Item>
-                            <Timeline.Item>Solve initial network problems 2015-09-01</Timeline.Item>
-                            <Timeline.Item>Technical testing 2015-09-01</Timeline.Item>
-                        </Timeline>
+                            <Timeline pending=" " className="detailtime">
+                                {this.state.data}
+                            </Timeline>
+                            <Timeline pending="Recording..." >
+                                {this.state.datas}
+                            </Timeline>
                         </div>
                     </div>
                     <div className="k_button">
-                        <Truemodal/>
-                        <Button type="primary">返回</Button>
+                        <Truemodal url="http://192.168.40.180/index.php/Index/index/handle"/>
+                        <Button type="primary" onClick={this.back}>返回</Button>
                     </div>
                 </div>
             </div>

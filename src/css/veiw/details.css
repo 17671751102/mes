@@ -38,23 +38,60 @@
 .messagecontent span {
     color: #666;
 }
-/* 模态框样式 */
-.vertical-center-modal {
+.messagecontent>p>label{
+    width: auto;
+}
+.messagecontent>p{
+    margin: 0;
+}
+/* 事件轴 */
+.ant-timeline {
+    display: inline-block;
+}
+.detailtime .ant-timeline-item-tail,
+.detailtime .ant-timeline-item-head-blue,
+.messagecontent .detailtime .ant-timeline-item-last .ant-timeline-item-tail{
+    display: none;
+}
+.detailtime{
+    left: 147px;
+    position: relative;
+    top: -68px;
+}
+.detailtime .ant-timeline-item .ant-timeline-item-content{
+    left: -155px;
+}
+/* 按钮样式 */
+.k_button{
     text-align: center;
-    white-space: nowrap;
-  }
-  
-  .vertical-center-modal:before {
-    content: '';
+}
+.k_button>div{
     display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-    width: 0;
-  }
-  
-  .vertical-center-modal .ant-modal {
-    display: inline-block;
-    vertical-align: middle;
-    top: 0;
-    text-align: left;
-  }
+}
+.k_button>div>button,
+.k_button>div>button:visited,
+.k_button>div>button:focus{
+    color: #fff;
+    border: 1px solid #ffad37;
+    background-color: #ffad37;
+    width: 100px;
+    height: 30px;
+    margin-right: 20px;
+}
+.k_button>div>button:hover{
+    border: 1px solid #ff8e33;
+    background-color: #ff8e33;
+}
+.k_button>button,
+.k_button>button:visited,
+.k_button>button:focus{
+    color: #fff;
+    border: 1px solid #ff8e33;
+    background-color: #ff8e33;
+    width: 100px;
+    height: 30px;
+}
+.k_button>button:hover{
+    border: 1px solid #ff7333;
+    background-color: #ff7333;
+}
