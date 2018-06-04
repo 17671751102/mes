@@ -1,6 +1,8 @@
 import React,{ Component } from 'react';
 import {Link} from 'react-router-dom';
 import { Modal, Button } from 'antd';
+import src from '../../../img/success.png'
+import '../../../css/veiw/modal.css'
 import $ from 'jquery';
 class Truemodal extends React.Component {
     constructor(){
