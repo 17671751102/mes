@@ -65,7 +65,7 @@ class Donetable extends Component{
     render(){
         const columns = this.columns;
         return(<Table dataSource={this.props.url} columns={columns} loading={this.props.loading} 
-            pagination={{total:5,
+            pagination={{
                 current:this.state.current,
                 size:"small",
                 position:"bottom",
