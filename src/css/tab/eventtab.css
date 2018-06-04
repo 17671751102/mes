@@ -47,15 +47,6 @@
     width: 250px;
     margin-right: 5px;
 }
-.righttab .ant-btn-primary{
-    background-color: #ffad37;
-    border-radius: 4px;
-    font-size: 14px;
-    color: #fff;
-    border: 0px;
-    height: 29px;
-    width: 88px;
-}
 .advanced{
     width: calc(100% - 60px);
     border: 1px solid #e6e6e6;
@@ -154,18 +145,23 @@
     vertical-align: bottom;
     padding-bottom: 6px;
 }
-.list_pro_right button{
+.list_pro_right>div>button,
+.list_pro_right>div>button:focus{
     border: 1px solid #00a0e9;
     color: #00a0e9;
     border-radius: 15px;
     background-color: #fff;
-    padding: 4px 35px;
     cursor: pointer;
     margin-right: 10px;
+    width: 88px;
 }
-.list_pro_right button:hover{
+.list_pro_right>div>button:hover{
     background-color: #00a0e9;
     color: #fff;
+    width: 88px;
+}
+.list_pro_right>div{
+    display: inline-block;
 }
 /* 多选框样式 */
 .checklist{

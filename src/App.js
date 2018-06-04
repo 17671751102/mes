@@ -10,7 +10,7 @@ const getConfirmation = (message, callback) => {
 class App extends Component {
   render(){
     return(
-      <BrowserRouter basename="/minooo" getUserConfirmation={getConfirmation}>
+      <BrowserRouter getUserConfirmation={getConfirmation}>
       {/*basename 用于给路径添加一个基础路径*/}
         <div>
           <Route exact path='/' component={Ingo} />

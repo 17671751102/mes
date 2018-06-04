@@ -8,8 +8,26 @@ class Truemodal extends React.Component {
     constructor(){
         super()
         this.state={
-            visible: false
+            visible: false,
+            src:null,
+            data:null
         }
+    }
+    load(){
+      $.ajax({
+        type: "post",
+        dataType: "json",
+        url: this.props.url,
+        success:function(json){
+          this.setState({
+            src:src,
+            data:json.message
+          })
+        }.bind(this),
+        error(){
+          console.log("未获取数据")
+        }
+      })
     }
     showModal = () => {
         this.setState({
@@ -26,6 +44,9 @@ class Truemodal extends React.Component {
           visible: false,
         });
     }
+    componentDidMount(){
+      this.load()
+    }
   render() {
     return (
       <div>
@@ -37,9 +58,9 @@ class Truemodal extends React.Component {
             onCancel={this.handleCancel}
             onOk={this.handleOk}
         >
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
+          <img src={this.state.src} alt=""/>
+          <br/>
+          {this.state.data}
         </Modal>
       </div>
     );

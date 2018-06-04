@@ -18,3 +18,25 @@
     top: 0;
     text-align: left;
   }
+  .ant-modal-content{
+    text-align: center;
+    height: 300px;
+  }
+  .ant-modal-body{
+    height: 100%;
+  }
+  .ant-modal-body img{
+    margin-top: 65px;
+    margin-bottom: 20px;
+  }
+  .ant-modal-close{
+    margin-right: 30px;
+    background-color: #ddd;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+  }
+  .ant-modal-close-x{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }

@@ -4,7 +4,6 @@ import { Timeline, Button } from 'antd';
 import Truemodal from './modal/truemodal'
 import src from '../../img/watch.png'
 import '../../css/veiw/details.css'
-import history from 'history/createBrowserHistory' 
 class Ddtails extends Component{
     constructor(){
         super()
@@ -91,7 +90,7 @@ class Ddtails extends Component{
         };
     }
     back(){
-        this.props.history.goBack()
+        window.location.href="/main/event|leak"
     }
     render(){
         return(
@@ -116,8 +115,8 @@ class Ddtails extends Component{
                         </div>
                     </div>
                     <div className="k_button">
-                        <Truemodal/>
-                        <Button type="primary" onClick={this.back.bind(this)}>返回</Button>
+                        <Truemodal url="http://192.168.40.180/index.php/Index/index/handle"/>
+                        <Button type="primary" onClick={this.back}>返回</Button>
                     </div>
                 </div>
             </div>
