@@ -235,3 +235,9 @@ body,html{
 .systr:hover{
     background-color: #f3f6ff;
 }
+.ant-table-column-sorter-up{
+    margin-bottom: 8px;
+}
+.ant-table-column-sorter{
+    top: -7px;
+}
