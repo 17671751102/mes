@@ -17,8 +17,7 @@ class Index extends Component {
                     </div>
                     <div className="k_count k_condition">
                         <p>处置工作情况</p>
-                        <div className="k_datapercentage">85%</div>
-                        <div className="k_percentage">归档完成率</div>
+                        
                         <Chartbar url="http://192.168.40.180/index.php/Index/index/czqk"/>
                     </div>
                     <div className="k_count k_statistics">

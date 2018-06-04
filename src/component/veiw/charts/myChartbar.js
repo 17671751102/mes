@@ -6,7 +6,8 @@ class Chartbar extends Component{
         super()
         this.state={
             result:null,
-            title:null
+            title:null,
+            number:null
         }
     }
     loadlists(){
@@ -19,6 +20,7 @@ class Chartbar extends Component{
                 var jsons = []
                 //图表种类
                 var labe =[]
+                var number=(json.message[2].count/json.message[0].count)*100
                 for (var i = 0; i < json.message.length; i++) {
                     jsons.push({
                         value: parseInt(json.message[i].count,10),
@@ -28,7 +30,8 @@ class Chartbar extends Component{
                 }
                 this.setState({
                     result: jsons,
-                    title:labe
+                    title:labe,
+                    number:number
                 })
                 var myChartbar = echarts.init(document.getElementById('mainbar'));
                     myChartbar.setOption({  
@@ -114,7 +117,11 @@ class Chartbar extends Component{
     }
     render(){
         return(
+        <div>
+            <div className="k_datapercentage">{this.state.number}%</div>
+            <div className="k_percentage">归档完成率</div>
             <span id="mainbar"></span>
+        </div>
         )
     }
 }
