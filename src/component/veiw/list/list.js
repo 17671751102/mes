@@ -26,7 +26,7 @@ class List extends Component{
                 for(var i=0;i<json.message.length;i++){
                     lists.push(
                         <div className="list_pro" key={i}>
-                            <input type="checkbox" onClick={this.onChange} className="checklist"/>
+                            <input type="checkbox" onClick={this.onChange} className="checklist" key={i}/>
                             <div className="list_pro_right">
                                 <Link to="/main/Details">
                                     <DescriptionList size="large" title={'事件编号：'+json.message[i].Number} col={4} >
@@ -47,11 +47,13 @@ class List extends Component{
                 this.setState({
                     checkbox:lists
                 })
+
             }.bind(this),
             error:function(){
                 console.log('没能获取list数据')
             }
         })
+        
     }
     componentDidMount(){
         this.loadlists()

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 import { Timeline, Button } from 'antd';
+import Truemodal from './modal/truemodal'
 import src from '../../img/watch.png'
 import '../../css/veiw/details.css'
 class Ddtails extends Component{
@@ -8,7 +9,7 @@ class Ddtails extends Component{
         super()
         this.state={
             data:null,
-            div:null
+            div:null,
         }
     }
     getdatas(){
@@ -101,6 +102,7 @@ class Ddtails extends Component{
                         </div>
                     </div>
                     <div className="k_button">
+                        <Truemodal/>
                         <Button type="primary">返回</Button>
                     </div>
                 </div>
