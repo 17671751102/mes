@@ -19,7 +19,7 @@ class Tab extends Component{
         $.ajax({
             type: "post",
             dataType: "json",
-            url: 'http://192.168.40.180/index.php/Index/index/nofinish_data',
+            url: 'http://1.2.3.20/index.php/Index/index/nofinish_data',
             success: function (json) {
                 var jsons =[]
                 for(var i=0;i<json.message.length;i++){
@@ -43,7 +43,7 @@ class Tab extends Component{
         $.ajax({
             type: "post",
             dataType: "json",
-            url: 'http://192.168.40.180/index.php/Index/index/finish_data',
+            url: 'http://1.2.3.20/index.php/Index/index/finish_data',
             success: function (json) {
                 var jsons =[]
                 for(var i=0;i<json.message.length;i++){
@@ -69,7 +69,7 @@ class Tab extends Component{
         $.ajax({
             type: "post",
             dataType: "json",
-            url: 'http://192.168.40.180/index.php/Index/index/nofinish_data',
+            url: 'http://1.2.3.20/index.php/Index/index/nofinish_data',
             data:{value:value},
             success:function(json){
                 var jsons =[]
@@ -96,7 +96,7 @@ class Tab extends Component{
         $.ajax({
             type: "post",
             dataType: "json",
-            url: 'http://192.168.40.180/index.php/Index/index/finish_data',
+            url: 'http://1.2.3.20/index.php/Index/index/finish_data',
             data:{value:value},
             success:function(json){
                 var jsons =[]

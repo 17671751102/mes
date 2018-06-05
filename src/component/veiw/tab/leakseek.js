@@ -22,7 +22,7 @@ class HorizontalLoginForm extends Component {
         $.ajax({
             type: "post",
             dataType: "json",
-            url: 'http://192.168.40.180/index.php/Index/index/city_data',
+            url: 'http://1.2.3.20/index.php/Index/index/city_data',
             success:function(json){
                 var op=[]
                 for(var i=0;i<json.message.length;i++){

@@ -22,7 +22,7 @@ class Main extends Component{
     //     }
     // }
     handle(){  
-        return (<Details url="http://192.168.40.180/index.php/Index/index/event_detail"/>)
+        return (<Details url="http://1.2.3.20/index.php/Index/index/event_detail"/>)
       }  
     render(){
         return(

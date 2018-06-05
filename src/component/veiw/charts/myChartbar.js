@@ -21,6 +21,7 @@ class Chartbar extends Component{
                 //图表种类
                 var labe =[]
                 var number=(json.message[2].count/json.message[0].count)*100
+                number=number.toFixed(2)
                 for (var i = 0; i < json.message.length; i++) {
                     jsons.push({
                         value: parseInt(json.message[i].count,10),

@@ -40,7 +40,7 @@ class List extends Component{
                                         <Description term="处置状态"><Ellipsis length={8}>{json.message[i].DealStatus}</Ellipsis></Description>
                                     </DescriptionList>
                                 </Link>
-                                <Truemodal url="http://192.168.40.180/index.php/Index/index/handle"/>
+                                <Truemodal url="http://1.2.3.20/index.php/Index/index/handle"/>
                             </div>
                         </div>
                     )

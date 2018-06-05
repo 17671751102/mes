@@ -90,7 +90,7 @@ class Ddtails extends Component{
         };
     }
     back(){
-        window.location.href="/main/event|leak"
+        window.location.href="/#/main/event|leak"
     }
     render(){
         return(
@@ -115,7 +115,7 @@ class Ddtails extends Component{
                         </div>
                     </div>
                     <div className="k_button">
-                        <Truemodal url="http://192.168.40.180/index.php/Index/index/handle"/>
+                        <Truemodal url="http://1.2.3.20/index.php/Index/index/handle"/>
                         <Button type="primary" onClick={this.back}>返回</Button>
                     </div>
                 </div>

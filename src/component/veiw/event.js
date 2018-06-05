@@ -13,11 +13,11 @@ class Event extends Component{
                     <Tabs defaultActiveKey="1">
                         <TabPane tab="安全事件" key="1">
                             <Eventseek/>
-                            <List url="http://192.168.40.180/index.php/Index/index/event_list"/>
+                            <List url="http://1.2.3.20/index.php/Index/index/event_list"/>
                         </TabPane>
                         <TabPane tab="安全漏洞" key="2">
                             <Leakseek/>
-                            <List url="http://192.168.40.180/index.php/Index/index/leak_list"/>
+                            <List url="http://1.2.3.20/index.php/Index/index/leak_list"/>
                         </TabPane>
                     </Tabs>
                 </div>

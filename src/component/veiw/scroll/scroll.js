@@ -51,8 +51,8 @@ class Scroll extends Component{
                     <span>|</span>
                 </div>
                 <Carousel vertical autoplay={true} className="sysscorll">
-                    {this.state.result}
-                            {/* <div>
+                    {/* {this.state.result} */}
+                            <div>
                                 <Link to="">广东省广州市1公司，需要处理广东省广州市XX公司发生XXX事件，需要处理</Link>
                             </div>
                             <div>
@@ -60,7 +60,7 @@ class Scroll extends Component{
                             </div>
                             <div>
                                 <Link to="">广东省广州市3公司，需要处理广东省广州市XX公司发生XXX事件，需要处理</Link>
-                            </div> */}
+                            </div>
                 </Carousel>              
             </div>
         )
